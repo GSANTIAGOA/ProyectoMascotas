@@ -1,0 +1,62 @@
+{
+    "name": "VMGSAWIN05",
+    "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSA02/providers/Microsoft.Compute/virtualMachines/VMGSAWIN05",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "eastus",
+    "properties": {
+        "vmId": "8bdbb0b9-b1d6-4b20-9b34-25af172d8fae",
+        "hardwareProfile": {
+            "vmSize": "Standard_DS1_v2"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "MicrosoftWindowsServer",
+                "offer": "WindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Windows",
+                "name": "VMGSAWIN05_disk1_20cc688f750b4a70bc39357110a07249",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSA02/providers/Microsoft.Compute/disks/VMGSAWIN05_disk1_20cc688f750b4a70bc39357110a07249"
+                }
+            },
+            "dataDisks": [
+                {
+                    "lun": 0,
+                    "name": "D",
+                    "createOption": "Attach",
+                    "caching": "None",
+                    "managedDisk": {
+                        "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSA02/providers/Microsoft.Compute/disks/d"
+                    }
+                }
+            ]
+        },
+        "osProfile": {
+            "computerName": "VMGSAWIN05",
+            "adminUsername": "GSA",
+            "windowsConfiguration": {
+                "provisionVMAgent": true,
+                "enableAutomaticUpdates": true
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSA02/providers/Microsoft.Network/networkInterfaces/vmgsawin05381"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "provisioningState": "Succeeded"
+    }
+}
