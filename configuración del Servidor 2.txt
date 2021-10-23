@@ -1,0 +1,80 @@
+{
+    "name": "VMGSAUBUN05",
+    "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSAUBUN052/providers/Microsoft.Compute/virtualMachines/VMGSAUBUN05",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "eastus2",
+    "properties": {
+        "vmId": "a0de40b5-ffb6-4446-935c-ec2863929960",
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "Canonical",
+                "offer": "UbuntuServer",
+                "sku": "18.04-LTS",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "VMGSAUBUN05",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSAUBUN052/providers/Microsoft.Compute/disks/VMGSAUBUN05"
+                }
+            },
+            "dataDisks": [
+                {
+                    "lun": 0,
+                    "name": "D",
+                    "createOption": "Attach",
+                    "caching": "None",
+                    "managedDisk": {
+                        "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSAUBUN052/providers/Microsoft.Compute/disks/d"
+                    }
+                }
+            ]
+        },
+        "osProfile": {
+            "computerName": "VMGSAUBUN05",
+            "adminUsername": "azureuser",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/azureuser/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDP+rbyeTK07SmrD9KXEEEE8nQ89b+sOaB0V/lvnJkudBzqFbiUKZba/Af+6lvn5pww0tC3qsc5h2UEf6uatP28ITUC0fKLLvqcEv2yfiyB5DnUUzQ9OxfpMVOUWcu7tMTiIZFYoO2ctpeoGCD3qtJ3IdXtkVzxBjvg/pH0xtS5ymcshYctoZolKObaPmVG0pxe00WDcxyoKj/Ss0SAah13ovZ/KKtDjX88taXjYmchH8ujQIKh98/zwhtAz2CfR5ihv6pyUnOSRdvcVmB+JW7LaF7tL0pCJczFtKiWIN/RdHDKflOYghIiA8DnZWK4GMmHWxA+7yT95N7J4rxF0le8HmySq9L8Ss/IIPufq0hFz1ne8qsgVlDmMYJnbwIuL51n9aEr/pCE2Fg9w2kyyY92EQe4CTedsEm5NVHtDeb9EtNSteOAJTHmuMbLExHme465hJSsjRPM6qVdkQAWzR+VjgZwX/y3mNYXWK0ertNkobXDsA8GaQX1NP/kwxjC/GrGwv2QkknlcQSMtIFYnI2drt9EmKDrotzJw/O57E3uqXY9b/u04WLAo3W7VW2lmwuTa9EccKSjcIYP2fEczDQDB4ojXqexuupVfOIBANlm8m3XciWUTig/TnuEmoDzZ3AvdgYGiCkFlDcOrNIyvsblgUq2STX01cT2F872fkSPGQ== gioma@LAPTOP-E8S5D7R9\r\n"
+                        }
+                    ]
+                }
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSAUBUN052/providers/Microsoft.Network/networkInterfaces/VMGSAUBUN05754"
+                }
+            ]
+        },
+        "provisioningState": "Succeeded"
+    },
+    "resources": [
+        {
+            "name": "enablevmaccess",
+            "id": "/subscriptions/903309c1-a4b3-47d6-86c3-6ed037bf32f7/resourceGroups/VMGSAUBUN052/providers/Microsoft.Compute/virtualMachines/VMGSAUBUN05/extensions/enablevmaccess",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "eastus2",
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.OSTCExtensions",
+                "type": "VMAccessForLinux",
+                "typeHandlerVersion": "1.4",
+                "settings": {}
+            }
+        }
+    ]
+}
